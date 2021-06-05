@@ -33,7 +33,9 @@ int main(int argc, char const *argv[]) {
     graph[u].push_back(v);
     graph[v].push_back(u);
   }
-  BFS(1, V);
+  int s;
+  cin >> s;
+  BFS(s, V);
   cout << endl;
   return 0;
 }

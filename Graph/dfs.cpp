@@ -25,7 +25,9 @@ int main(int argc, char const *argv[]) {
   vector<bool> visited(v);
   for (int i = 0; i < v; i++)
     visited[i] = false;
-  DFS(1, visited);
+  int s;
+  cin >> s;
+  DFS(s, visited);
   cout << endl;
   return 0;
 }
