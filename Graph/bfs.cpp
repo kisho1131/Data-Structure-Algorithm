@@ -2,7 +2,6 @@
 using namespace std;
 /*===========Your Code Here=============*/
 vector<int> graph[1000];
-
 void BFS(int s, int V) {
   list<int> q;
   bool *visited = new bool[V];

@@ -44,7 +44,7 @@ void InsertElement(int data, int pos) {
 // Reverse the Linked List --> Iterative Method...
 void ReverseList() {
   Node *fwd = head;
-  Node *ptr = head;
+  Node *current = head;
   Node *prev = NULL;
   while (ptr) {
     fwd = ptr->next;
@@ -74,7 +74,8 @@ void PrintList() {
   }
 }
 
-// Using Stack --> Space Complexity O(N)
+// Using Stack --> Space Complexity O(N) --> O(1)
+
 bool PalindromeList() {
   stack<int> st;
   Node *ptr1 = head;
@@ -94,7 +95,11 @@ bool PalindromeList() {
   return true;
 }
 
+// 1->2->1
+// time : O(N) + O(N) ==> O(N)
+// 1->2->1
 // Detect the Loop and Count the No of Nodes in the Loop
+
 int CountNodes(Node *head) {
   Node *temp = head;
   int count = 1;
@@ -176,6 +181,7 @@ Node *Intersection(Node *head1, Node *head2) {
     s.insert(head1->data);
     head1 = head1->next;
   }
+
   while (head2) {
     if (s.find(head2->data) != s.end()) {
       *node = new Node(head2->data);

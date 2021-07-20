@@ -6,9 +6,13 @@ vector<int> graph[1000];
 void DFS(int start, vector<bool> &visited) {
   visited[start] = true;
   cout << start << " ";
-  for (int i = 0; i < graph[start].size(); i++) {
-    if (visited[graph[start][i]] == false)
-      DFS(graph[start][i], visited);
+  // for (int i = 0; i < graph[start].size(); i++) {
+  //   if (visited[graph[start][i]] == false)
+  //     DFS(graph[start][i], visited);
+  // }
+  for (auto node : graph[start]) {
+    if (!visited[node])
+      DFS(node, visited);
   }
 }
 
