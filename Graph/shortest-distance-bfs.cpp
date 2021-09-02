@@ -10,7 +10,6 @@ public:
     V = v;
     g = new list<int>[V];
   }
-
   void addEdge(int u, int v, bool directed = true) {
     g[u].push_back(v);
     if (directed)
